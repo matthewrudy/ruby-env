@@ -1,12 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    hiredis (0.6.1)
     rack (1.6.4)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  hiredis
   rack
 
 BUNDLED WITH
