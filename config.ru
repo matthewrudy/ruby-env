@@ -1,3 +1,9 @@
 require 'pp'
 
-run Proc.new { |env| ['200', {'Content-Type' => 'text/plain'}, [ENV.pretty_inspect]] }
+env_string = ENV.pretty_inspect
+
+app = lambda do |env|
+  ['200', {'Content-Type' => 'text/plain'}, StringIO.new(env_string)]
+end
+
+run app
